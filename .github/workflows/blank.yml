@@ -42,12 +42,7 @@ jobs:
       with:
         name: deploy_dist
         path: dist/pwatest
-    - name: Archive code coverage result
-      if: success()
-      uses: actions/upload-artifact@v1
-      with:
-        name: deploy_coverage
-        path: coverage
+
     
   deploy:
       runs-on: ubuntu-latest
